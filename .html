@@ -1,53 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birds of the World Gallery</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        /* Custom styles if needed, Tailwind handles most */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Style for smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Add some padding below the fixed header */
-        body {
-             padding-top: 70px; /* Adjust based on header height */
-        }
-        header {
-            position: fixed; /* Make header truly sticky */
-            width: 100%;
-            top: 0;
-            background-color: white; /* Ensure background is solid */
-        }
-        /* Simple loading spinner */
-        .loader {
-            border: 4px solid #f3f3f3; /* Light grey */
-            border-top: 4px solid #3498db; /* Blue */
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            animation: spin 1s linear infinite;
-            margin: 10px auto;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+ </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
 
-    <header class="shadow-md z-50 py-4">
+    <!-- Header -->
+    <header class="shadow-md py-4">
         <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             <div class="text-2xl font-bold text-blue-600 mb-2 md:mb-0">
                 <i class="fas fa-dove mr-2"></i>Birds of the World
@@ -63,8 +19,8 @@
         </div>
     </header>
 
-    <section id="home" class="relative bg-cover bg-center text-white py-24 md:py-32 -mt-[70px]" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1600x800/a0aec0/ffffff?text=Beautiful+Bird+Habitat');">
-         <div class="absolute inset-0 bg-gray-700 opacity-50" aria-hidden="true"></div>
+    <!-- Home Section -->
+    <section id="home" class="relative bg-cover bg-center text-white py-24 md:py-32 -mt-[70px]" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080');">
         <div class="container mx-auto px-4 text-center relative z-10">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">Discover the Fascinating World of Birds</h1>
             <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Explore our gallery of bird species with photos and detailed information.</p>
@@ -72,288 +28,91 @@
         </div>
     </section>
 
+    <!-- Main Content -->
     <main class="container mx-auto px-4 py-12">
 
+        <!-- Gallery Section -->
         <section id="gallery" class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Bird Gallery</h2>
             <p class="text-center text-gray-600 mb-8">Browse our collection of birds from around the world. Click the download icon to view or save the image.</p>
             <div id="bird-gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                </div>
-             <div id="gallery-loading" class="text-center hidden py-6">
-                 <div class="loader"></div>
-                 <p class="text-gray-600 mt-2">Loading bird gallery...</p>
-             </div>
+            </div>
+            <div id="gallery-loading" class="text-center hidden py-6">
+                <div class="loader"></div>
+                <p class="text-gray-600 mt-2">Loading bird gallery...</p>
+            </div>
         </section>
 
+        <!-- Facts Section -->
         <section id="facts" class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Avian Fun Facts</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                 <div class="bg-blue-100 p-6 rounded-lg shadow hover:shadow-md transition duration-300">
-                    <h3 class="text-xl font-semibold text-blue-800 mb-2"><i class="fas fa-feather-alt mr-2" aria-hidden="true"></i>Lightweight Champions</h3>
-                    <p class="text-blue-700">Birds have hollow bones, which makes them lighter for flight. An eagle's entire skeleton weighs less than its feathers!</p>
+                <div class="bg-blue-100 p-6 rounded-lg shadow hover:shadow-md transition duration-300">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-2"><i class="fas fa-feather-alt mr-2"></i>Lightweight Champions</h3>
+                    <p class="text-blue-700">Birds have hollow bones, which make them lighter for flight.</p>
                 </div>
                 <div class="bg-green-100 p-6 rounded-lg shadow hover:shadow-md transition duration-300">
-                    <h3 class="text-xl font-semibold text-green-800 mb-2"><i class="fas fa-brain mr-2" aria-hidden="true"></i>Smart Species</h3>
-                    <p class="text-green-700">Crows and ravens are known for their intelligence, capable of problem-solving and even recognizing human faces.</p>
-                </div>
-                <div class="bg-yellow-100 p-6 rounded-lg shadow hover:shadow-md transition duration-300">
-                    <h3 class="text-xl font-semibold text-yellow-800 mb-2"><i class="fas fa-tachometer-alt mr-2" aria-hidden="true"></i>Speed Demons</h3>
-                    <p class="text-yellow-700">The Peregrine Falcon is the fastest animal on Earth, reaching speeds over 240 mph (386 km/h) during its hunting dive.</p>
-                </div>
-                 <div class="bg-purple-100 p-6 rounded-lg shadow hover:shadow-md transition duration-300">
-                    <h3 class="text-xl font-semibold text-purple-800 mb-2"><i class="fas fa-palette mr-2" aria-hidden="true"></i>Colorful Vision</h3>
-                    <p class="text-purple-700">Many birds can see ultraviolet light, allowing them to perceive colors invisible to humans, which helps in finding food and mates.</p>
-                </div>
-                 <div class="bg-pink-100 p-6 rounded-lg shadow hover:shadow-md transition duration-300">
-                    <h3 class="text-xl font-semibold text-pink-800 mb-2"><i class="fas fa-route mr-2" aria-hidden="true"></i>Incredible Journeys</h3>
-                    <p class="text-pink-700">The Arctic Tern holds the record for the longest migration, traveling from the Arctic to the Antarctic and back each year.</p>
-                </div>
-                 <div class="bg-indigo-100 p-6 rounded-lg shadow hover:shadow-md transition duration-300">
-                    <h3 class="text-xl font-semibold text-indigo-800 mb-2"><i class="fas fa-music mr-2" aria-hidden="true"></i>Natural Musicians</h3>
-                    <p class="text-indigo-700">Birdsong is complex communication, used for attracting mates, defending territory, and signaling danger. Some birds can even mimic sounds.</p>
+                    <h3 class="text-xl font-semibold text-green-800 mb-2"><i class="fas fa-brain mr-2"></i>Smart Species</h3>
+                    <p class="text-green-700">Crows and ravens are known for their intelligence and problem-solving skills.</p>
                 </div>
             </div>
         </section>
 
+        <!-- About Section -->
         <section id="about" class="bg-gray-200 -mx-4 px-4 py-16 text-center">
-             <div class="container mx-auto">
+            <div class="container mx-auto">
                 <h2 class="text-3xl font-bold mb-4 text-gray-800">About Birds of the World</h2>
-                <p class="max-w-3xl mx-auto text-gray-700 mb-6">
-                    This website is dedicated to celebrating the incredible diversity and beauty of birds found across our planet. Our goal is to provide an accessible resource for learning about different species, their habitats, conservation status, and fascinating behaviors.
-                </p>
-                <p class="max-w-3xl mx-auto text-gray-700">
-                    Whether you're a seasoned birder or just curious about the feathered friends in your backyard, we hope you find this site informative and inspiring. Explore, discover, and appreciate the wonders of the avian world!
-                </p>
-             </div>
+                <p class="max-w-3xl mx-auto text-gray-700">This website is dedicated to celebrating the incredible diversity and beauty of birds found across our planet.</p>
+            </div>
         </section>
 
     </main>
 
+    <!-- Footer -->
     <footer class="bg-gray-800 text-gray-300 py-8">
         <div class="container mx-auto px-4 text-center">
-            <div class="mb-4">
-                <a href="#" class="text-gray-400 hover:text-white mx-3 transition duration-300">Privacy Policy</a> |
-                <a href="#" class="text-gray-400 hover:text-white mx-3 transition duration-300">Terms of Service</a> |
-                <a href="#contact" class="text-gray-400 hover:text-white mx-3 transition duration-300">Contact</a>
-            </div>
-            <div class="mb-4">
-                <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-white mx-2 text-xl"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                 <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-white mx-2 text-xl"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                 <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-white mx-2 text-xl"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            </div>
             <p class="text-sm text-gray-500">&copy; <span id="current-year"></span> Birds of the World. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        // --- Mock Bird Data ---
-        // In a real application, this data would likely come from an API.
-        // CORRECTED imageUrls to use placeholder service properly.
         const allBirds = [
             {
                 name: "Bald Eagle",
                 scientificName: "Haliaeetus leucocephalus",
-                description: "A majestic bird of prey found primarily in North America, known for its white head and tail.",
-                imageUrl: "https://placehold.co/600x400/81e6d9/2d3748?text=Bald+Eagle", // Corrected
-                status: "Least Concern",
-                statusColor: "bg-green-500",
-                locations: ["North America"]
-            },
-            {
-                name: "Atlantic Puffin",
-                scientificName: "Fratercula arctica",
-                description: "A charismatic seabird known for its colorful beak during breeding season.",
-                imageUrl: "https://placehold.co/600x400/f6ad55/2d3748?text=Atlantic+Puffin", // Corrected
-                status: "Vulnerable",
-                statusColor: "bg-yellow-500",
-                locations: ["North Atlantic"]
-            },
-            {
-                name: "Blue Jay",
-                scientificName: "Cyanocitta cristata",
-                description: "An intelligent and adaptable bird known for its bright blue, white, and black plumage.",
-                imageUrl: "https://placehold.co/600x400/63b3ed/2d3748?text=Blue+Jay", // Corrected
-                status: "Least Concern",
-                statusColor: "bg-green-500",
-                locations: ["North America", "Central America"]
-            },
-            {
-                name: "Ruby-throated Hummingbird",
-                scientificName: "Archilochus colubris",
-                description: "A tiny, energetic bird famous for its rapid wing beats and iridescent feathers.",
-                imageUrl: "https://placehold.co/600x400/d53f8c/ffffff?text=Hummingbird", // Corrected
-                status: "Least Concern",
-                statusColor: "bg-green-500",
-                locations: ["North America", "Central America"]
-            },
-            {
-                name: "Indian Peafowl",
-                scientificName: "Pavo cristatus",
-                description: "Known for the male's iridescent tail feathers (train). Native to the Indian subcontinent.",
-                imageUrl: "https://placehold.co/600x400/38b2ac/ffffff?text=Peacock", // Corrected
-                status: "Least Concern",
-                statusColor: "bg-green-500",
-                locations: ["Asia", "India"]
-            },
-             {
-                name: "Snowy Owl",
-                scientificName: "Bubo scandiacus",
-                description: "A large white owl native to Arctic regions, known for its silent flight.",
-                imageUrl: "https://placehold.co/600x400/e2e8f0/2d3748?text=Snowy+Owl", // Corrected
-                status: "Vulnerable",
-                statusColor: "bg-yellow-500",
-                locations: ["North America", "Eurasia", "Arctic"]
-            },
-             {
-                name: "King Penguin",
-                scientificName: "Aptenodytes patagonicus",
-                description: "The second largest species of penguin, found in subantarctic islands. Excellent divers.",
-                imageUrl: "https://placehold.co/600x400/fbd38d/2d3748?text=King+Penguin", // Corrected
-                status: "Least Concern",
-                statusColor: "bg-green-500",
-                locations: ["Antarctica", "Subantarctic"]
-            },
-             {
-                name: "Himalayan Monal",
-                scientificName: "Lophophorus impejanus",
-                description: "A colorful pheasant native to the Himalayas, the national bird of Nepal.",
-                imageUrl: "https://placehold.co/600x400/7f9cf5/ffffff?text=Himalayan+Monal", // Corrected
-                status: "Least Concern",
-                statusColor: "bg-green-500",
-                locations: ["Asia", "Himalayas", "India"]
-            },
-            {
-                name: "Scarlet Macaw",
-                scientificName: "Ara macao",
-                description: "A large, vibrant parrot native to tropical South American forests. Known for its loud calls.",
-                imageUrl: "https://placehold.co/600x400/f56565/ffffff?text=Scarlet+Macaw", // Corrected
-                status: "Least Concern",
-                statusColor: "bg-green-500",
-                locations: ["South America", "Central America"]
-            },
-            {
-                name: "Keel-billed Toucan",
-                scientificName: "Ramphastos sulfuratus",
-                description: "Famous for its large, multi-colored bill. Found in tropical forests from Southern Mexico to Colombia.",
-                imageUrl: "https://placehold.co/600x400/f6e05e/2d3748?text=Toucan", // Corrected
-                status: "Least Concern",
-                statusColor: "bg-green-500",
-                locations: ["Central America", "South America"]
-            },
-             {
-                name: "European Robin",
-                scientificName: "Erithacus rubecula",
-                description: "A small, familiar songbird with a distinctive orange breast, common across Europe.",
-                imageUrl: "https://placehold.co/600x400/f59e0b/ffffff?text=Robin", // Corrected
-                status: "Least Concern",
-                statusColor: "bg-green-500",
-                locations: ["Europe", "Asia", "North Africa"]
-            },
-             {
-                name: "Kookaburra",
-                scientificName: "Dacelo novaeguineae",
-                description: "A large kingfisher native to Australia, famous for its call resembling human laughter.",
-                imageUrl: "https://placehold.co/600x400/a0aec0/2d3748?text=Kookaburra", // Corrected
-                status: "Least Concern",
-                statusColor: "bg-green-500",
-                locations: ["Australia"]
+                description: "A majestic bird of prey found in North America.",
+                imageUrl: "https://placehold.co/600x400"
             }
         ];
 
-        // --- DOM Elements ---
         const birdGalleryGrid = document.getElementById('bird-gallery-grid');
         const galleryLoading = document.getElementById('gallery-loading');
-        const currentYearSpan = document.getElementById('current-year');
 
-        // --- Functions ---
-
-        /**
-         * Creates an HTML card for a bird with a download link.
-         * @param {object} bird - The bird data object.
-         * @returns {string} - HTML string for the bird card.
-         */
         function createBirdCard(bird) {
-            // Base URL for placeholder images if the provided one fails or is missing
-            const placeholderBase = 'https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';
-            // Use bird's imageUrl if valid, otherwise generate a placeholder with the bird's name
-            const imageUrl = (bird.imageUrl && bird.imageUrl.startsWith('http'))
-                             ? bird.imageUrl
-                             : `https://placehold.co/600x400/cccccc/ffffff?text=${encodeURIComponent(bird.name)}`;
-            // Generate a simple filename suggestion for download
-            const downloadFilename = `${bird.name.toLowerCase().replace(/ /g, '_')}.jpg`;
-
             return `
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
-                    <img src="${imageUrl}" alt="${bird.name}" class="w-full h-48 object-cover" onerror="this.onerror=null; this.src='${placeholderBase}'; this.alt='Image not found';">
-                    <div class="p-5 flex flex-col flex-grow">
-                        <h3 class="text-xl font-semibold mb-1 text-gray-900">${bird.name}</h3>
-                        <span class="block text-sm text-gray-500 italic mb-2">${bird.scientificName}</span>
-                        <p class="text-gray-700 text-sm mb-3 flex-grow">${bird.description || 'No description available.'}</p>
-                        <div class="mt-auto pt-3 flex justify-between items-center">
-                            <span class="inline-block ${bird.statusColor || 'bg-gray-400'} text-white text-xs font-medium px-2 py-1 rounded-full">${bird.status || 'Unknown'}</span>
-                            <a href="${imageUrl}" target="_blank" download="${downloadFilename}" class="text-blue-600 hover:text-blue-800 transition duration-300" title="View/Save Image">
-                                <i class="fas fa-download fa-lg" aria-hidden="true"></i>
-                            </a>
-                        </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="${bird.imageUrl}" alt="${bird.name}" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-semibold text-gray-900">${bird.name}</h3>
+                        <p class="text-gray-700">${bird.description}</p>
                     </div>
                 </div>
             `;
-            /*
-             * Note on download: The 'download' attribute works best for same-origin URLs.
-             * For cross-origin URLs like placeholders, it might just open the image in a new tab.
-             * Users can then right-click to save. Providing real images hosted on the same domain
-             * would make the download attribute more reliable for forcing a download prompt.
-             */
         }
 
-        /**
-         * Loads all birds into the gallery grid.
-         */
         function loadBirdGallery() {
-            // Ensure elements exist before manipulating them
-            if (!birdGalleryGrid || !galleryLoading) {
-                console.error("Gallery elements not found!");
-                return;
-            }
-
-            galleryLoading.classList.remove('hidden'); // Show loading indicator
-            birdGalleryGrid.innerHTML = ''; // Clear previous content
-
-            // Use setTimeout to allow the loading indicator to render before potentially blocking JS
+            galleryLoading.classList.remove('hidden');
             setTimeout(() => {
-                 try {
-                     if (allBirds && allBirds.length > 0) {
-                        allBirds.forEach(bird => {
-                            // Basic validation of bird object
-                            if (bird && bird.name && bird.scientificName) {
-                                birdGalleryGrid.innerHTML += createBirdCard(bird);
-                            } else {
-                                console.warn("Skipping invalid bird data:", bird);
-                            }
-                        });
-                     } else {
-                         birdGalleryGrid.innerHTML = '<p class="text-gray-600 col-span-full text-center">No birds found in the collection.</p>';
-                     }
-                 } catch (error) {
-                     console.error("Error loading bird gallery:", error);
-                     birdGalleryGrid.innerHTML = '<p class="text-red-600 col-span-full text-center">Could not load bird gallery due to an error.</p>';
-                 } finally {
-                    galleryLoading.classList.add('hidden'); // Hide loading indicator
-                 }
-            }, 50); // Short delay
+                birdGalleryGrid.innerHTML = allBirds.map(createBirdCard).join('');
+                galleryLoading.classList.add('hidden');
+            }, 500);
         }
 
-        // --- Initialization ---
         document.addEventListener('DOMContentLoaded', () => {
-            loadBirdGallery(); // Load all birds into the gallery on page load
-
-            // Set current year in footer
-            const currentYearSpan = document.getElementById('current-year');
-            if (currentYearSpan) {
-                currentYearSpan.textContent = new Date().getFullYear();
-            }
+            loadBirdGallery();
+            document.getElementById('current-year').textContent = new Date().getFullYear();
         });
-
     </script>
 
 </body>
